@@ -93,18 +93,15 @@ header {
     background-color: #ad2e32;
 }
 
-main {
-    width: 100vw;
-    height: auto;
-}
-
 .profile-picture {
     width: 55%;
     margin-right: 2%;
+    border-radius: 4%;
 }
 
 .profile-content {
     margin-bottom: 15%;
+    margin-left: 2%;
 }
 
 .wrapper-footer {
@@ -144,19 +141,31 @@ main {
 
     .wrapper-content {
         justify-content: center;
+        margin-top: 20px;
+    }
+
+    header .pages > a {
+        font-size: 4vw;
     }
 
     .profile-picture {
         margin: 0;
         margin-top: 25px;
+        width: 40%;
     }
     
     .profile-content h1 {
+        font-size: 5vw;
         text-align: center;
     }
 
     .profile-content article {
+        font-size: 3.1vw;
         text-align: center;
         white-space: nowrap;
+    }
+
+    .wrapper-footer p {
+        font-size: 3.5vw;
     }
 }
