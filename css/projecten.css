@@ -13,16 +13,16 @@
     font-family: var(--page-font);
 }
 
-.wrapper-projecten {
+.wrapper-profile {
     display: grid;
     height: 100vh;
     width: 100vw;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 0.2fr 3fr 0.25fr;
     grid-template-areas: 
-    "header header header header"
-    ". content content ."
-    "footer footer footer footer";
+    "header header"
+    "picture content"
+    "footer footer";
 }
 
 .wrapper-header {
@@ -38,7 +38,7 @@
 
 .wrapper-content {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     grid-area: content;
 }
@@ -93,44 +93,15 @@ header {
     background-color: #ad2e32;
 }
 
-main {
-    width: 100vw;
-    height: auto;
+.profile-picture {
+    width: 55%;
+    margin-right: 2%;
+    border-radius: 4%;
 }
 
-.project {
-    position: relative; 
-    width: 200px;
-    height: 250px;
-}
-
-.project-header {
-    width: 100%;
-    height: 15%;
-    background-color: red;
-    position: absolute; 
-    top: -18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.project > img {
-    width: 100%;
-    display: block; 
-}
-
-.project-description {
-    position: absolute;
-    bottom: 35px; 
-    max-width: 100%;
-    height: 35%; 
-    background-color: rgba(0, 0, 0, 0.3);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
+.profile-content {
+    margin-bottom: 15%;
+    margin-left: 2%;
 }
 
 .wrapper-footer {
@@ -143,4 +114,58 @@ main {
 
 .wrapper-footer > p {
     background-color: var(--footer-background-color)
+}
+
+@media screen and (max-width: 700px) {
+    * {
+        max-width: 100vw;
+    }
+
+    .wrapper-profile {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 1.5fr 1.5fr 0.25fr;
+        grid-template-areas: 
+        "header"
+        "picture"
+        "content"
+        "footer";
+    }
+
+    .wrapper-footer {
+        width: 100vw;
+    }
+
+    .wrapper-picture {
+        justify-content: center;
+    }
+
+    .wrapper-content {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    header .pages > a {
+        font-size: 4vw;
+    }
+
+    .profile-picture {
+        margin: 0;
+        margin-top: 25px;
+        width: 40%;
+    }
+    
+    .profile-content h1 {
+        font-size: 5vw;
+        text-align: center;
+    }
+
+    .profile-content article {
+        font-size: 3.1vw;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    .wrapper-footer p {
+        font-size: 3.5vw;
+    }
 }
