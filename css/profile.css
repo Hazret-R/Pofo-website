@@ -181,6 +181,11 @@ header {
         margin-top: 50px;
         width: 40%;
     }
+
+    .profile-content {
+        margin: 0;
+        margin-bottom: 15%;
+    }
     
     .profile-content h1 {
         font-size: 5vw;
