@@ -100,6 +100,17 @@ header {
     transform: translateY(-10px);
 }
 
+/*.project-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}*/
+
+.project-title img {
+    max-width: 50px;
+}
+
 .project-description {
     width: 400px;
     height: 200px;
@@ -135,6 +146,7 @@ header {
 }
 
 .programming-lang > div img {
+    background-color: var(--project-div-background-color);
     max-width: 65px;
 }
 
